@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       colors: {
         brand: '#B2FFC8',
+        brandHover: '#97D4A8',
       },
       fontFamily: {
         headline: ['Montserrat'],

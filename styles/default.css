@@ -1,3 +1,28 @@
 body {
   @apply text-gray-700 bg-black;
 }
+
+.icon {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  width: 10px;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 20px;
+  cursor: ew-resize;
+  background: #97d4a8;
+  box-shadow: -405px 0 0 400px #b2ffc8;
+}
+
+input[type='range']::-webkit-slider-thumb:hover {
+  transition-property: background-color, border-color, color, fill, stroke,
+    opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  background: #b2ffc8;
+}
