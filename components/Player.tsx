@@ -31,6 +31,8 @@ const Controls = ({
   return (
     <div className="flex space-x-5 text-gray-50 text-xs justify-between items-end">
       <button
+        name="play-pause-button"
+        aria-label="Play Pause Button"
         className={classNames(
           'bg-brand hover:bg-brandHover text-gray-900 rounded-md px-2 py-1 transition',
           {
@@ -44,7 +46,9 @@ const Controls = ({
         </div>
       </button>
       <button
-        className="bg-gray-700 hover:bg-gray-800 text-gray-400 rounded-md px-2 py-1 h-6"
+        name="playbackrate-button"
+        aria-label="Playback Rate Button"
+        className="bg-gray-900 hover:bg-gray-800 text-gray-400 rounded-md px-2 py-1 h-6"
         onClick={() => setPlaybackRate(cyclePlaybackRates(playbackRate))}
       >
         SPEED {playbackRate}x
@@ -79,7 +83,11 @@ const TimeSlider = ({
 
   return (
     <div>
+      <label htmlFor="seek-bar" className="sr-only">
+        Seekbar
+      </label>
       <input
+        id="seek-bar"
         className="rounded-md appearance-none bg-gray-700 h-2 overflow-hidden w-full"
         type="range"
         min="0"
@@ -127,9 +135,9 @@ const Player: React.FC<PlayerProps> = ({ episode }) => {
       />
       <div className="w-full md:w-8/12 bg-gray-900 p-5 rounded-md z-20 bg-opacity-80">
         <Marquee gradient={false} delay={15} pauseOnHover={true}>
-          <h3 className="text-gray-300 mb-3 text-xl line-clamp-1 hover:line-clamp-none transition">
+          <h1 className="text-gray-300 mb-3 text-xl line-clamp-1 hover:line-clamp-none transition">
             {episode?.attributes?.title}
-          </h3>
+          </h1>
           <></>
         </Marquee>
 

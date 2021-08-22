@@ -3,7 +3,7 @@ import Document, { Html, Head, Main, NextScript } from 'next/document'
 class MyDocument extends Document {
   render(): JSX.Element {
     return (
-      <Html>
+      <Html lang="en-US">
         <Head>
           <link rel="shortcut icon" type="image/x-icon" href="/logo.svg" />
           <link

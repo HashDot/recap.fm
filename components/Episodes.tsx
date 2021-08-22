@@ -32,7 +32,7 @@ const Item = ({
       <div className="text-xxs flex space-x-5 text-gray-400">
         <p>Episode 000</p> <p>{episode?.attributes?.formatted_published_at}</p>
       </div>
-      <h3 className="text-xl">{episode?.attributes?.title}</h3>
+      <h1 className="text-xl">{episode?.attributes?.title}</h1>
     </div>
   )
 }
@@ -43,7 +43,7 @@ const Summary = ({ episode }: { episode: Episode }) => {
   }
   return (
     <div className="w-full flex flex-col bg-gray-900 px-5 py-2 rounded-md">
-      <h3 className="prose-xl text-gray-500 tracking-wider">Transcript</h3>
+      <h1 className="prose-xl text-gray-100 tracking-wider">Transcript</h1>
       <div className="prose-lg text-gray-300">
         {parseHTML(episode?.attributes?.description)}
       </div>
