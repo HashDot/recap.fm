@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import axios from 'axios'
 
 import Player from '../components/Player'
 import Episodes, { Episode } from '../components/Episodes'
@@ -51,8 +52,11 @@ type StaticProps = {
 }
 
 export async function getStaticProps(): Promise<StaticProps> {
-  const res = await fetch(`${process.env.API_URL}/api/episodes`)
-  const data = await res.json()
+  const { data } = await axios('https://api.transistor.fm/v1/episodes', {
+    headers: {
+      'x-api-key': process.env.TRANSISTORFM_API_KEY,
+    },
+  })
 
   if (!data) {
     return {}
