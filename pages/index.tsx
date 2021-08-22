@@ -22,7 +22,7 @@ export const Home: React.FC<HomeProps> = ({ data }) => {
 
   return (
     <div className="relative h-screen w-screen">
-      <div className="fixed right-0 bottom-0 h-96 w-64 bg-lars bg-sizeLars bg-no-repeat bg-right-bottom z-0" />
+      <div className="fixed right-0 bottom-0 h-96 w-72 bg-lars bg-sizeLars bg-no-repeat bg-right-bottom z-0" />
       <div className="flex flex-col p-10">
         <h1 className="text-brand text-6xl md:text-9xl font-semibold font-headline">
           RECAP
